@@ -6,7 +6,7 @@ import (
 	uuid "github.com/satori/go.uuid"
 )
 
-type CreditCrad struct {
+type CreditCard struct {
 	ID              string
 	Name            string
 	Number          string
@@ -15,12 +15,12 @@ type CreditCrad struct {
 	CVV             int32
 	Balance         float64
 	Limit           float64
-	CrteatedAt      time.Time
+	CreatedAt       time.Time
 }
 
-func NewCreditCard() *CreditCrad {
-	c := &CreditCrad{}
+func NewCreditCard() *CreditCard {
+	c := &CreditCard{}
 	c.ID = uuid.NewV4().String()
-	c.CrteatedAt = time.Now()
+	c.CreatedAt = time.Now()
 	return c
 }
